@@ -6,27 +6,18 @@ This repo contains the codes and data reported in the paper.
 
 ## Dependencies
 
-This script has been tested runing under Python 3.7.12, with the following packages installed (along with their dependencies).
-
-- `torch==1.11.0`
-- `torch-geometric==2.0.4`
-- `dgl==0.4.3`
-- `numpy==1.21.6`
-- `scipy==1.4.1`
-
-Some Python module dependencies are listed in `requirements.txt`, which can be easily intalled with pip:
-
-```bash
-pip install -r requirements.txt
-```
+- Python ≥ 3.7
+- torch==1.11.0
+- dgl==0.4.3
+- pip install -r requirements.txt
 
 ## Pretraining and Donstream Datasets
 
 The raw graph datasets (H-index, Us-Airport, Actor, Chameleon and DD242) have been saved in "data/raw_data".
 
-The pretraining graph $G_{train}$ and $G_{downstream}$ are also saved in "data/". $G_{train}$ and $G_{downstream}$ can also be derived by running generate_pretraining_and_downstream_dataset.py.
+The pretraining graph $G_{train}$ and the downstream graphs $G_{downstream}$ are also saved in "data/". $G_{train}$ and $G_{downstream}$ can also be derived by running generate_pretraining_and_downstream_dataset.py.
 
-Generate the pretraining and downstream dataset of usa-airports. 
+For example: Generate the pretraining and downstream dataset of usa-airports.
 
 ```bash
 python generate_pretraining_and_downstream_dataset.py --dataset usa-airports
@@ -34,7 +25,11 @@ python generate_pretraining_and_downstream_dataset.py --dataset usa-airports
 
 ## Pretrain the GNN with PAug
 
-Pretrain the GNN on usa-airports, with $\beta$=5, $m$=0.3 and $\gamma$=0.5.
+```bash
+bash scripts/pretrain_paug.sh <gpu> <beta> <m> <gamma> <pretraining_dataset> <pretraining_dataset> 
+```
+
+For example: Pretrain the GNN on usa-airports, with $\beta$=5, $m$=0.3 and $\gamma$=0.5.
 
 ```bash
 bash scripts/pretrain_paug.sh <gpu> 0.1 0.3 0.5 usa-airports_mst_twin_domain1 usa-airports_mst_domain1
