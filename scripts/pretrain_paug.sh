@@ -12,7 +12,7 @@ adversarial_dataset=$6
 ARGS=${@:7}
 
 
-python train_aug_adversarial_simplified_with_smart_iter_cleaned.py \
+python pretrain_paug.py \
     --exp Final_Test \
     --batch-size 128\
     --model-path saved \
