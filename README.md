@@ -73,3 +73,7 @@ For example:
 ```bash
 bash scripts/node_classification/classify_node_of_downstream_dataset.sh 1 save/...... 64 usa-airports_mst_twin_domain2
 ```
+
+## Acknowledgements
+
+Part of this code is inspired by Jiezhong Qiu et al.'s [GCC: Graph Contrastive Coding for Graph Neural Network Pre-Training](https://github.com/THUDM/GCC).
