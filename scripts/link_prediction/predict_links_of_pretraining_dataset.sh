@@ -6,5 +6,5 @@ dataset=$4
 secret_dataset=$5
 
 
-python gcc/tasks/link_prediction.py --gpu $gpu --dataset $dataset --secret_dataset $secret_dataset --hidden-size $hidden_size --model from_numpy --emb-path "$load_path/$dataset.npy" --secret_emb_path "$load_path/$dataset.npy"  
+python tasks/link_prediction.py --gpu $gpu --dataset $dataset --secret_dataset $secret_dataset --hidden-size $hidden_size --emb-path "$load_path/$dataset.npy"  
 

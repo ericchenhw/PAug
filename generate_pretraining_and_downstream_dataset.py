@@ -155,6 +155,11 @@ if __name__ == "__main__":
     
     link_prediction_root = f'data/link_prediction/{args.dataset}'
     node_classification_root = f'data/node_classification/{args.dataset}'
+    if not os.path.isdir(link_prediction_root):
+        os.makedirs(link_prediction_root)
+    if not os.path.isdir(node_classification_root):
+        os.makedirs(node_classification_root)
+    
     raw_root = f'data/raw_data/{args.dataset}'
     raw_dataset_edgelist_path = f'data/raw_data/{args.dataset}/{args.dataset}.edgelist'
     
@@ -162,13 +167,16 @@ if __name__ == "__main__":
     
     # generate node2id
     node2id = generate_node2id_dicts(edges_node)
-    pkl.dump(node2id, open(f'data/node2dicts/{args.dataset}.pkl', 'wb'))
+    if not os.path.isdir('data/node2id_dicts'):
+        os.mkdirs('data/node2id_dicts')
+    pkl.dump(node2id, open(f'data/node2id_dicts/{args.dataset}_node2id.pkl', 'wb'))
     
     # generate mst_twin_domain's edgelist
     edge_selected_domain1, edge_selected_domain2 = generate_mst_twin_domain_dataset(edges_node, node2id, p=0.5)
 
     save_records(edge_selected_domain1, os.path.join(link_prediction_root, f'{args.dataset}_mst_twin_domain1.edgelist') )
     save_records(edge_selected_domain1, os.path.join(node_classification_root, f'{args.dataset}_mst_twin_domain1.edgelist'))
+    save_records(edge_selected_domain1, os.path.join(link_prediction_root, f'{args.dataset}_mst_twin_domain1_4_fold.edgelist'))
     save_records(edge_selected_domain2, os.path.join(link_prediction_root, f'{args.dataset}_mst_twin_domain2.edgelist'))
     save_records(edge_selected_domain2, os.path.join(node_classification_root, f'{args.dataset}_mst_twin_domain2.edgelist'))
 

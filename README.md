@@ -9,6 +9,7 @@ This repo contains the codes and data reported in the paper.
 - Python ≥ 3.7
 - torch==1.11.0
 - dgl==0.4.3
+- torch_geometric==2.0.4
 - pip install -r requirements.txt
 
 ## Pretraining and Donstream Datasets
