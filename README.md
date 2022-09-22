@@ -48,7 +48,7 @@ bash scripts/generate.sh <gpu> <load_path> <dataset>
 For example:
 
 ```bash
-bash scripts/generate.sh 1 saved/.../current.pth usa-airports_mst_twin_domain2
+bash scripts/generate.sh 1 saved/<file_name>/current.pth usa-airports_mst_twin_domain2
 ```
 
 ### Test the Privacy-preserving Performance of the Pre-trained GNN with PAug
@@ -60,7 +60,7 @@ bash scripts/link_prediction/predict_links_of_pretraining_dataset.sh <gpu> <load
 For example:
 
 ```bash
-bash scripts/privacy_performance/link_prediction.sh 0 saved/...... usa-airports_mst_twin_domain2 usa-airports_mst_twin_domain1
+bash scripts/privacy_performance/link_prediction.sh 0 saved/<file_name> usa-airports_mst_twin_domain2 usa-airports_mst_twin_domain1
 ```
 
 ### Test the Generalizability of the Pre-trained GNN with PAug
@@ -72,7 +72,7 @@ bash scripts/node_classification/classify_node_of_downstream_dataset.sh <gpu> <l
 For example:
 
 ```bash
-bash scripts/node_classification/classify_node_of_downstream_dataset.sh 1 save/...... 64 usa-airports_mst_twin_domain2
+bash scripts/node_classification/classify_node_of_downstream_dataset.sh 1 saved/<file_name> 64 usa-airports_mst_twin_domain2
 ```
 
 ## Acknowledgements
