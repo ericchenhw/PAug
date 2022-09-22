@@ -4,5 +4,5 @@ ARGS=${@:3}
 
 for dataset in $ARGS
 do
-    python generate.py --gpu $gpu --dataset $dataset --augmentation rwr --load-path $load_path 
+    python generate.py --gpu $gpu --dataset $dataset --load-path $load_path 
 done
