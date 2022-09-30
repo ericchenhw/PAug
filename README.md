@@ -33,7 +33,7 @@ bash scripts/pretrain_paug.sh <gpu> <beta> <m> <gamma> <pretraining_dataset> <pr
 For example: Pretrain the GNN on usa-airports, with $\beta$=5, $m$=0.3 and $\gamma$=0.5.
 
 ```bash
-bash scripts/pretrain_paug.sh <gpu> 0.1 0.3 0.5 usa-airports_mst_twin_domain1 usa-airports_mst_domain1
+bash scripts/pretrain_paug.sh <gpu> 0.1 0.3 0.5 usa-airports_mst_twin_domain1 usa-airports_mst_twin_domain1
 ```
 
 
@@ -60,7 +60,7 @@ bash scripts/link_prediction/predict_links_of_pretraining_dataset.sh <gpu> <load
 For example:
 
 ```bash
-bash scripts/privacy_performance/link_prediction.sh 0 saved/<file_name> usa-airports_mst_twin_domain2 usa-airports_mst_twin_domain1
+bash scripts/link_prediction/predict_links_of_pretraining_dataset.sh 0 saved/<file_name> usa-airports_mst_twin_domain2 usa-airports_mst_twin_domain1
 ```
 
 ### Test the Generalizability of the Pre-trained GNN with PAug
