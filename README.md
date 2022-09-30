@@ -60,7 +60,7 @@ bash scripts/link_prediction/predict_links_of_pretraining_dataset.sh <gpu> <load
 For example:
 
 ```bash
-bash scripts/link_prediction/predict_links_of_pretraining_dataset.sh 0 saved/<file_name> usa-airports_mst_twin_domain2 usa-airports_mst_twin_domain1
+bash scripts/link_prediction/predict_links_of_pretraining_dataset.sh 0 saved/<file_name> 64 usa-airports_mst_twin_domain2 usa-airports_mst_twin_domain1
 ```
 
 ### Test the Generalizability of the Pre-trained GNN with PAug
