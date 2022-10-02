@@ -12,7 +12,7 @@ This repo contains the codes and data reported in the paper.
 - torch_geometric==2.0.4
 - pip install -r requirements.txt
 
-## Pretraining and Donstream Datasets
+## Pretraining and Downstream Datasets
 
 The raw graph datasets (H-index, Us-Airport, Actor, Chameleon and DD242) have been saved in "data/raw_data".
 
