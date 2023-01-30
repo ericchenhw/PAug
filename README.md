@@ -1,6 +1,6 @@
 # Release Graph Pre-Trained Model via Privacy-Preserving Data Augmentation
 
-This project is the implementatoin of the paper "Release Graph Pre-Trained Model via Privacy-Preserving Data Augmentation". This paper proposes to use **P**rivacy-preserving data **Aug**mentation (**PAug**) when pre-training the GNN, to protect the sensitive link in the pre-training dataset from leakage.
+This project is the implementation of the paper "Release Graph Pre-Trained Model via Privacy-Preserving Data Augmentation". This paper proposes to use **P**rivacy-preserving data **Aug**mentation (**PAug**) when pre-training the GNN, to protect the sensitive link in the pre-training dataset from leakage.
 
 This repo contains the codes and data reported in the paper.
 
